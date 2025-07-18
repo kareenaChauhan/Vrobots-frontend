@@ -369,7 +369,7 @@ const Header: React.FC = () => {
             </nav>
 
             <div className="flex items-center space-x-3 md:space-x-4">
-              {user ? <span onClick={logout}>logout</span> : <Link to="/profile">
+              {user ? <span onClick={logout}>logout</span> : <Link to="/login">
                 <span className={`hidden md:block text-xs lg:text-sm cursor-pointer transition-all duration-500 hover:scale-105 ${isSticky ? 'text-gray-700' : 'text-gray-600'
                   } hover:text-gray-900`}>
                   LOGIN / REGISTER
