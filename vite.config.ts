@@ -19,9 +19,12 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000,
-    host: "0.0.0.0",
-    strictPort: true,
-    // allowedHosts: ['.amazonaws.com', '.builtwithrocket.new']
-  }
+    proxy: {
+      '/api': {
+        target: 'http://13.200.195.70:8000/graphql/', // Replace with your backend IP and port, e.g., http://192.168.1.100:4000
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 });
