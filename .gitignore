@@ -2,25 +2,92 @@
 node_modules/
 package-lock.json
 
+# Yarn v3
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # Production build
 build/
+dist/
+out/
 
 # Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
 pnpm-debug.log*
 
-.DS_Store
-Thumbs.db
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-# Optional: if using TypeScript
-*.tsbuildinfo
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# Optional: if using testing tools
+# Directory for instrumented libs
+lib-cov
+
+# Coverage
 coverage/
+.nyc_output
+*.lcov
 jest-test-results.json
 
-# Optional: if using IDEs
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+web_modules/
+
+# Caches
+.cache
+.parcel-cache
+.vitepress/cache
+.vuepress/dist
+.temp
+.svelte-kit/
+.nuxt/
+.next/
+.docusaurus
+.serverless/
+.fusebox/
+.dynamodb/
+.firebase/
+
+# TypeScript
+*.tsbuildinfo
+
+# Configs
+.env
+.env.*
+!.env.example
+.eslintcache
+.stylelintcache
+.lock-wscript
+
+# VSCode & IDEs
 .vscode/
 .idea/
+.vscode-test
+.tern-port
+
+# Misc
+*.tgz
+.yarn-integrity
+.node_repl_history
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# OS-specific
+.DS_Store
+Thumbs.db
